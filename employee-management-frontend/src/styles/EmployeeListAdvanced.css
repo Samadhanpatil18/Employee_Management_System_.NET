@@ -1,0 +1,71 @@
+.employee-list-advanced-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.stat-card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card .card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.employee-table {
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.table-responsive {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+h1 {
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+  .stat-value {
+    font-size: 22px;
+  }
+
+  .stat-card .card-title {
+    font-size: 12px;
+  }
+}
