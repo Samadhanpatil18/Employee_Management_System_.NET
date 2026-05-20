@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using EmployeeManagement.Application.Interfaces;
-using EmployeeManagement.Application.DTOs;
+﻿using EmployeeManagement.Application.Commands;
 using EmployeeManagement.Application.Common;
-using MediatR;
-using EmployeeManagement.Application.Commands;
+using EmployeeManagement.Application.DTOs;
+using EmployeeManagement.Application.Interfaces;
 using EmployeeManagement.Application.Queries;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.API.Controllers
 {
@@ -60,6 +61,7 @@ namespace EmployeeManagement.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Manager")]
         public async Task<IActionResult> Delete(int id)
         {
             var command = new DeleteEmployeeCommand(id);
